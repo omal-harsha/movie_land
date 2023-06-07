@@ -9,15 +9,6 @@ import SearchIcon from './search.svg';
 
 const API_URL = 'http://www.omdbapi.com?apikey=bfe5f5df'
 
-const movie1 = {
-    
-        "Title": "Amazing Spiderman Syndrome",
-        "Year": "2012",
-        "imdbID": "tt2586634",
-        "Type": "movie",
-        "Poster": "N/A"
-    }
-
 
 const App = () => {
 
@@ -26,7 +17,7 @@ const App = () => {
 
     const searchMovies = async (title) => {
 
-        const response = await fetch(`${API_URL}&s=${title}`);
+        const response = await fetch(`https://www.omdbapi.com/?apikey=bfe5f5df&s=Spiderman`);
         const data =  await response.json();
 
         setMovies(data.Search);
