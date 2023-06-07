@@ -7,7 +7,8 @@ import SearchIcon from './search.svg';
 
 //bfe5f5df
 
-const API_URL = 'http://www.omdbapi.com?apikey=bfe5f5df'
+const API_URL = 'https://www.omdbapi.com/?apikey=bfe5f5df'
+//https://www.omdbapi.com/?apikey=bfe5f5df&s=Spiderman
 
 
 const App = () => {
@@ -17,7 +18,7 @@ const App = () => {
 
     const searchMovies = async (title) => {
 
-        const response = await fetch(`https://www.omdbapi.com/?apikey=bfe5f5df&s=Spiderman`);
+        const response = await fetch(`${API_URL}&s=${title}`);
         const data =  await response.json();
 
         setMovies(data.Search);
